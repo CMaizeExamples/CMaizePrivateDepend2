@@ -3,7 +3,8 @@ project(CMaize_Private_Depend2)
 
 include("${PROJECT_SOURCE_DIR}/cmake/get_cpp.cmake")
 
-#set(CPP_GITHUB_TOKEN f64bff2118e84de749f10dec47ddc97a078e7082)
+#must set a token to access private library -- can't use this one anymore because it's been pushed to remote repo
+set(CPP_GITHUB_TOKEN f64bff2118e84de749f10dec47ddc97a078e7082)
 
 cpp_find_or_build_dependency(
     CMaizePrivateDepend
