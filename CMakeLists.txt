@@ -3,16 +3,7 @@ project(CMaize_Private_Depend2)
 
 include("${PROJECT_SOURCE_DIR}/cmake/get_cpp.cmake")
 
-set(CPP_GITHUB_TOKEN 5fc19636c51f2bd2f57e9e2b80907c7ac13daa21)
-
-cpp_find_or_build_dependency(
-    CMakePrivate
-    PRIVATE true
-    URL github.com/CMaizeExamples/CMakePrivate
-    VERSION ally
-    BUILD_TARGET CMakePrivate
-    FIND_TARGET CMakePrivate::CMakePrivate
-)
+#set(CPP_GITHUB_TOKEN f64bff2118e84de749f10dec47ddc97a078e7082)
 
 cpp_find_or_build_dependency(
     CMaizePrivateDepend
