@@ -10,9 +10,10 @@ set(
 include(get_cmaize)
 
 # Get dependencies
-cpp_find_or_build_dependency(
+cmaize_find_or_build_dependency(
     CMaizePrivateDepend
     URL github.com/CMaizeExamples/CMaizePrivateDepend
+    PRIVATE TRUE
     BUILD_TARGET CMaizePrivateDepend
     FIND_TARGET CMaizePrivateDepend::CMaizePrivateDepend
     CMAKE_ARGS BUILD_TESTING=FALSE
@@ -23,12 +24,12 @@ cmaize_add_library(
     ${PROJECT_NAME}
     INCLUDE_DIRS "${CMAKE_CURRENT_LIST_DIR}/include/cmaize_private_depend_2"
     SOURCE_DIR "${CMAKE_CURRENT_LIST_DIR}/src/cmaize_private_depend_2"
-    DEPENDS CMaizePrivateDepend::CMaizePrivateDepend
+    DEPENDS CMaizePrivateDepend
 )
 
 if (BUILD_TESTING)
     # Build tests
-    cpp_find_or_build_dependency(
+    cmaize_find_or_build_dependency(
         Catch2
         URL github.com/catchorg/Catch2
         BUILD_TARGET Catch2
