@@ -2,6 +2,8 @@
 
 #include <cmaize_private_depend_2/cmaize_private_depend_2.hpp>
 
+using namespace cmaize_private_depend_2;
+
 TEST_CASE("cmaize_private_depend_2") {
     SECTION("does_cmaize_private_depend_2_work") {
         REQUIRE(call_cmaize_private_depend_2() == 7);
